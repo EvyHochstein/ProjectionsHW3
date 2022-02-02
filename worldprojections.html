@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projections</title>
+</head>
+<body>
+    <h1>In this project I learned how to display images in different projections</h1>
+    
+    <h2 style="color:red">Using QGIS, I was able to take a natural earth shapefile, and export different maps by changing the EPSG projections. Using the Indicatrix Plugin, it added a layer to see how distortion affects each projection. Indicatrix displays Tissot circles, tracking the change that affects either shape, distance, direction, etc.</p>
+    
+    <h2>WGS84 Projection</h2>
+    <h3>Observations: In the WGS84 projection, shape and direction are well preserved. However, the size of countries further from the equator are larger and stretched horizontally. </h3>
+    <a href="./Maps/WGS84.png">
+    <img src="./Maps/WGS84.png" alt="WGS84" width='500px'>
+    </a>
+    <h2>Aitoff Projection</h2>
+    <h3>Observations: The Aitoff projection bends the latitude and longitude, preserving shape at the center of the map. However, there is distortion of shape, area and distance on the outskirts of the map.This is caused by the growing distance between bending latitude and longitude lines.</h3>
+    <a href="./Maps/Aitoff.png">
+    <img src="./Maps/Aitoff.png" alt="Aitoff" width='500px'>
+    </a>
+    <h2>Pseudo Mercator Projection</h2>
+    <h3>Observations: The Pseudo Mercator projection has similar problems as WGS84. Latitude and Longitude are kept straight, but latitude distances begin to vary towards the poles, causing countries close to the polls to become very distorted in size. Otherwise, shape and direction are well preserved. </h3>
+    <a href="./Maps/3857.png">
+    <img src="./Maps/3857.png" alt="Pseudo Mercator" width='500px'>
+    </a>
+    <h2>Winkel Triple Projection</h2>
+    <h3>Observations: The Winkel Triple combines bending longitude lines with flat latitude lines, allowing for the size, shape, and area of countries to be relatively accurate, though distance becomes compromised. </h3>
+    <a href="./Maps/53018.png">
+    <img src="./Maps/53018.png" alt="Winkel Triple" width='500px'>
+    </a>
+    <h2>Cylindrical Equal Area Projection</h2>
+    <h3>Observations: Latitude and longitude are equidistant of eachother. While size, shape, and area near the equator are well maintained in this projection, the distortion of shape near the poles is very prominent. Direction and distance follow a similar problem: maintained at the equator, not so much near the poles. </h3>
+    <a href="./Maps/54034.png">
+    <img src="./Maps/54034.png" alt="Cylindrical Equal Area Projection" width='500px'>
+    </a>
+    <h2>Equidistant Conic Projection</h2>
+    <h3>Observations: This projection helps prevent distortion at the poles, which many other projections fail to do. However, it does a poor job projecting the entire world map, as the further from the pole one looks, the wider shape becomes. Therefore, area and direction are pretty accurate, but shape and distance become very distorted. As well, the map breaks, so there lacks continuation in the circular shape. </h3>
+    <a href="./Maps/54027.png">
+    <img src="./Maps/54027.png" alt="Equidistant Conic Projection" width='500px'>
+    </a>
+    <h2>North Pole Azimuthal Equidistant Projection</h2>
+    <h3>Observations: This projection is very similar to the Equidistant Conic, and has similar accuracies and distortions. The pole has accurate shape, distance, and direction, but the further from the poles, as latitude and longitude become more distant, the shape, area, and direction all become skewed.  </h3>
+    <a href="./Maps/102016.png">
+    <img src="./Maps/102016.png" alt="North Pole Azimuthal Equidistant Projection" width='500px'>
+    </a>
+    <h2>Bonne Projection</h2>
+    <h3>Observations: The most prominent observation is the heart shaped manor of this projection. Maintaining shape and area around the north pole, the curvature of the latitude and longitude cause the map to become distorted in shape, area, distance, and direction farther from the equator and meridian.   </h3>
+    <a href="./Maps/54024.png">
+    <img src="./Maps/54024.png" alt="Bonne Projection" width='500px'>
+    </a>
+    <h2>Van der Grinten Projection</h2>
+    <h3>Observations: Around the equator/meridian, the latitude and longitude are kept straight, and bend outward towards the poles. Then bend allows less distortion, but size is greatly affected towards the poles.  </h3>
+    <a href="./Maps/53029.png">
+    <img src="./Maps/53029.png" alt="Van der Grinten Projection" width='500px'>
+    </a>
+</body>
+</html>
